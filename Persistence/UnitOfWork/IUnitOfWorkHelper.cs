@@ -10,7 +10,9 @@ namespace Persistence.UnitOfWork
     public interface IUnitOfWorkHelper:IDisposable
     {
         event EventHandler<ObjectCreatedEventArgs> ObjectCreated;
-        T CreateInstance<T>();
-        object CreateInstance(string assemblyName, string typeName);
+        IApplicationDbContext DbContext { get; }
+      
+        void SaveChanges();
+        void RollBack();
     }
 }

@@ -50,13 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Daos\Dao.cs" />
+    <Compile Include="Daos\Interfaces\IDao.cs" />
+    <Compile Include="Daos\Interfaces\IProductDao.cs" />
+    <Compile Include="Daos\ProductDao.cs" />
     <Compile Include="IApplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork\IUnitOfWorkHelper.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Daos\" />
     <Folder Include="Mappers\" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{47ee8d83-7c87-4320-8ec4-1a11d7f9abde}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{e7063a85-eb6c-4e47-90e5-12593c3b1952}</Project>
       <Name>Utils</Name>

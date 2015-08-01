@@ -7,7 +7,7 @@ using Domain.Depots;
 
 namespace Domain.Products
 {
-    public class Product
+    public class ProductStore
     {
         public int Id { get; set; }
         public string Name { get; set; }
